@@ -9,6 +9,8 @@
     Currency Symbol    : DEV
     Block Explorer URL : https://moonbase.moonscan.io/
 ```
+
+-Add some test token from moonbase faucet to your metamask wallet
     
     
     
