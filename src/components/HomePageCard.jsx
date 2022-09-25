@@ -56,15 +56,15 @@ const HomePageCard = (props) => {
   return (
     <Container>
       <Image>
-        <img src={props.image} />
-        {/* <img src="temp.jpg" /> */}
+        <img src="temp.jpg" />
+        {/* <img src={props.image} /> */}
       </Image>
       <div ref={avatarRef} className="owner"></div>
       <Heading>
         <div>
           <h3>
             <b>Name : </b>
-            {props.name}
+            {props.name ? props.name : "Name"}
           </h3>
           <h3>
             <b>Price : </b>
@@ -125,7 +125,7 @@ const Heading = styled.div`
   display: flex;
   justify-content: right;
   gap: 2.5rem;
-  padding-top: 1.5rem;
+  padding-top: 2.5rem;
   padding-right: 1.5rem;
   div {
     display: flex;

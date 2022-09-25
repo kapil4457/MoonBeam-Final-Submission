@@ -31,17 +31,17 @@ const Home = () => {
         let num = Number(i.tokenId._hex);
         const tokenUri = await contract.tokenURI(num);
         console.log("tokenUri :", tokenUri);
-        const meta = await fetch(tokenUri);
-        console.log(meta);
+        // const meta = await fetch(tokenUri);
+        // console.log(meta);
         let price = ethers.utils.formatUnits(i.price.toString(), "ether");
         let item = {
           price,
           tokenId: i.tokenId.toNumber(),
           seller: i.seller,
           owner: i.owner,
-          image: meta.data.image,
-          name: meta.data.name,
-          description: meta.data.description,
+          // image: meta.data.image,
+          // name: meta.data.name,
+          // description: meta.data.description,
         };
         return item;
       })
@@ -134,54 +134,4 @@ const CardHolder = styled.div`
   overflow-x: hidden;
   gap: 3rem;
   padding-bottom: 5rem;
-`;
-
-const Filter = styled.div`
-  width: 100%;
-  height: 2rem;
-  display: flex;
-  justify-content: right;
-  padding: 0 15rem;
-  align-items: center;
-
-  select {
-    /* styling */
-    background-color: white;
-    border: thin solid blue;
-    border-radius: 4px;
-    display: inline-block;
-    font: inherit;
-    line-height: 1.5em;
-    padding: 0.5em 3.5em 0.5em 1em;
-
-    /* reset */
-
-    margin: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  }
-
-  select.classic {
-    background-image: linear-gradient(45deg, transparent 50%, blue 50%),
-      linear-gradient(135deg, blue 50%, transparent 50%),
-      linear-gradient(to right, skyblue, skyblue);
-    background-position: calc(100% - 20px) calc(1em + 2px),
-      calc(100% - 15px) calc(1em + 2px), 100% 0;
-    background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
-    background-repeat: no-repeat;
-  }
-
-  select.classic:focus {
-    background-image: linear-gradient(45deg, white 50%, transparent 50%),
-      linear-gradient(135deg, transparent 50%, white 50%),
-      linear-gradient(to right, gray, gray);
-    background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, 100% 0;
-    background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
-    background-repeat: no-repeat;
-    border-color: grey;
-    outline: 0;
-  }
 `;
