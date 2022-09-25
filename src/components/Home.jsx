@@ -31,18 +31,17 @@ const Home = () => {
         let num = Number(i.tokenId._hex);
         const tokenUri = await contract.tokenURI(num);
         console.log("tokenUri :", tokenUri);
-        // const meta = await fetch(tokenUri);
-        // console.log(meta);
-        // const obj = JSON.parse(meta);
+        const meta = await fetch(tokenUri);
+        console.log(meta);
         let price = ethers.utils.formatUnits(i.price.toString(), "ether");
         let item = {
           price,
           tokenId: i.tokenId.toNumber(),
           seller: i.seller,
           owner: i.owner,
-          // image: meta.data.image,
-          // name: meta.data.name,
-          // description: meta.data.description,
+          image: meta.data.image,
+          name: meta.data.name,
+          description: meta.data.description,
         };
         return item;
       })
