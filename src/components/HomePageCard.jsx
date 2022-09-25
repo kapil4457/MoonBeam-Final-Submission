@@ -56,8 +56,8 @@ const HomePageCard = (props) => {
   return (
     <Container>
       <Image>
-        <img src="temp.jpg" />
-        {/* <img src={props.image} /> */}
+        <img src={props.image} />
+        {/* <img src="temp.jpg" /> */}
       </Image>
       <div ref={avatarRef} className="owner"></div>
       <Heading>
