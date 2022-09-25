@@ -6,9 +6,14 @@ const ContactPage = () => {
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Phone, setPhone] = useState("");
+  const [Description, setDescription] = useState("");
   const [Message, setMessage] = useState("");
   const subject = "NFT MarketPlace Help";
-  useEffect(() => {}, [Name, Email, Phone, Message]);
+  useEffect(() => {
+    setMessage(`Name : ${Name} 
+                Phone : ${Phone}
+                Description : ${Description}`);
+  }, [Name, Email, Phone, Description]);
   return (
     <>
       <div className="container">
@@ -100,8 +105,8 @@ const ContactPage = () => {
                   name="message"
                   className="input"
                   placeholder="Message"
-                  value={Message}
-                  onChange={(e) => setMessage(e.target.value)}
+                  value={Description}
+                  onChange={(e) => setDescription(e.target.value)}
                 ></textarea>
               </div>
               <a
