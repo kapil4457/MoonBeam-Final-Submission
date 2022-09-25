@@ -56,8 +56,10 @@ npm start
 <h1 >Note</h1>
 If your browser doesnot support IPFS URL then before starting the project do the following changes :- 
 (Doing So,the image and name of the NFT which will be shown will not be the one that you uploaded , but will be a temporary immage)
-1. Go to Components folder and go to  Home.jsx and comment out the following lines as shown in the picture![Home](https://user-images.githubusercontent.com/78656206/192129825-67290c93-5dd6-4b8d-ac36-6faa621a16b1.png)
-2. Go to Components folder and go to HomePageCard.jsx and comment out the following lines of code as shown in the picture![HomePageCard](https://user-images.githubusercontent.com/78656206/192129930-b3883505-f303-4863-8a5b-f85301735561.png)
+1. Go to Components folder and go to  Home.jsx and comment out the following lines as shown in the picture<br>
+(https://user-images.githubusercontent.com/78656206/192129825-67290c93-5dd6-4b8d-ac36-6faa621a16b1.png)<br>
+2. Go to Components folder and go to HomePageCard.jsx and comment out the following lines of code as shown in the picture<br>
+(https://user-images.githubusercontent.com/78656206/192129930-b3883505-f303-4863-8a5b-f85301735561.png)<br>
 3. You will get the MetaData in your console and you can even check your data uploaded to ipfs
 
 
