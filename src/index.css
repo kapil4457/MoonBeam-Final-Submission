@@ -1,0 +1,31 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family:sans-serif;
+
+
+
+}
+.loader {
+  height: 80vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size:3rem;
+  color:red;
+  
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
